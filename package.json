@@ -1,0 +1,19 @@
+{
+  "name": "pydev",
+  "version": "1.0.0",
+  "description": "servidor web",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "runserver"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "devhres",
+  "license": "ISC"
+}
