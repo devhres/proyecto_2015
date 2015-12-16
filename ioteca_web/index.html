@@ -1,11 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
 	<meta charset="UTF-8">
 	<title></title>
 </head>
 <body>
- Hola html5
- 
+
+<div ng-controller="ctrl">
+	 Hola html5
+
+	<input type="text" ng-model="nombre">
+	{{ nombre }}
+	<button ng-click="save()">Save</button>
+	<table>
+		<tr ng-repeat="d in lista | filter:nombre">
+			<td> {{ d.nombre }}</td>
+			<td> {{ d.activo }}</td>
+		</tr>
+	</table>
+
+
+</div>
+
+<script src="node_modules/angular/angular.min.js"></script>
+
+<script type="text/javascript">
+var app=angular.module("app",[
+
+]);
+
+app
+.controller("ctrl", function ($scope) {
+	// body...
+	//$scope.nombre="juan";
+
+	$scope.save=function () {
+		console.log("Salvado "+$scope.nombre);
+	}
+	$scope.lista=[
+    {
+        "id": 1,
+        "nombre": "Revis",
+        "activo": false
+    },
+    {
+        "id": 2,
+        "nombre": "Libros",
+        "activo": true
+    },
+    {
+        "id": 3,
+        "nombre": "Periódico",
+        "activo": true
+    },
+    {
+        "id": 6,
+        "nombre": "Multimedia",
+        "activo": false
+    }
+];
+});
+
+
+</script>
 </body>
 </html>
