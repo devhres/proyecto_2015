@@ -1,0 +1,15 @@
+<div ng-controller="ctrl">
+	 Hola html5
+
+	<input type="text" ng-model="nombre">
+	{{ nombre }}
+	<button ng-click="save()">Save</button>
+	<table>
+		<tr ng-repeat="d in lista | filter:nombre">
+			<td> {{ d.nombre }}</td>
+			<td> {{ d.activo }}</td>
+		</tr>
+	</table>
+
+
+</div>
